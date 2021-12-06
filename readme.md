@@ -2,7 +2,7 @@
 
 **The web application of the calculator program shows success 
 and error flash messages of the calculation. The web application 
-uses Flask and Jinja**
+uses Flask and Jinja.**
 
 ## Flash Messages Output
 ### Success flash message
