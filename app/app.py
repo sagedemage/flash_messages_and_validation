@@ -23,7 +23,7 @@ def form():
         getattr(Calculator, operation)(value1, (value2,))
         result = ""
         if Calculator.get_result_of_last_calculation_in_history() is None:
-            flash("Error, can't divide by zero", "error")
+            flash("Division by Zero Error!", "error")
             result = "None"
         else:
             result = str(Calculator.get_result_of_last_calculation_in_history())
