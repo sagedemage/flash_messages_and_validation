@@ -5,5 +5,7 @@ and error flash messages of the calculation. The web application
 uses flask and jinga**
 
 ## Flash Messages Output
-![](images/error_flash_message.png)
+### Success flash message
 ![](images/success_flash_message.png)
+### Error flash message
+![](images/error_flash_message.png)
