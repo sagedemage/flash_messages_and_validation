@@ -22,13 +22,16 @@ def form():
         operation = request.form['operation']
         getattr(Calculator, operation)(value1, (value2,))
         result = ""
-        if Calculator.get_result_of_last_calculation_in_history() is None:
+        if Calculator.get_last_calculation() is None:
             flash("Division by Zero Error!", "error")
             result = "None"
+            return render_template('result.html', value1=value1,
+                                   value2=value2, operation=operation, result=result)
         else:
-            result = str(Calculator.get_result_of_last_calculation_in_history())
+            result = str(Calculator.get_last_calculation())
             flash("Success!", "success")
-        return render_template('result.html', value1=value1, value2=value2, operation=operation, result=result)
+            return render_template('result.html', value1=value1,
+                                   value2=value2, operation=operation, result=result)
     else:
         return render_template('form.html')
 
@@ -39,8 +42,7 @@ def result_message():
     value1 = request.args.get('value1')
     value2 = request.args.get('value2')
     operation = request.args.get('operation')
-    result = request.args.get('result') # something is going please fix this
+    result = request.args.get('result')
     message = operation + " of " + value1 + " " + value2 + " is " + result
     flash('You were successfully logged in')
     return message
-    # return render_template('result.html')
