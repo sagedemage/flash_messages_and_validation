@@ -22,7 +22,7 @@ def form():
         operation = request.form['operation']
 
         if value1 == "" or value2 == "":
-            flash("Input is empty", "error")
+            flash("Input Empty Error!", "error")
             return render_template('result.html', value1=value1,
                                    value2=value2, operation=operation, result="")
 
