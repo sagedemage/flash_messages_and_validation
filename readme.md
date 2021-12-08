@@ -8,4 +8,7 @@ uses Flask and Jinja.**
 ### Success flash message
 ![](images/success_flash_message.png)
 ### Error flash message
-![](images/error_flash_message.png)
+### Division by Zero
+![](images/error_flash_message_division_by_zero.png)
+### Input is empty
+![](images/error_flash_message_empty_input.png)
