@@ -14,6 +14,7 @@ def homepage():
 
 @app.route('/form', methods=['POST', 'GET'])
 def form():
+    # pylint: disable=no-else-return
     """Display the form"""
     if request.method == 'POST':
         # name of the tag

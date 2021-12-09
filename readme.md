@@ -12,3 +12,7 @@ uses Flask and Jinja.**
 ![](images/error_flash_message_division_by_zero.png)
 ### Input is empty
 ![](images/error_flash_message_empty_input.png)
+
+## Test Result
+![](images/test_result_part_1.png)
+![](images/test_result_part_2.png)
